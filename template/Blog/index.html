@@ -1,0 +1,47 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}
+    My blog
+{% endblock %}
+
+{% block css_files %}
+
+    <link rel="stylesheet" href="{% static "index.css" %}">
+
+{% endblock %}
+{% block content%}
+
+<section id="welcome">
+    <header>
+        <img src="{% static "images/comp.jpeg" %}" alt="Collins-author of this blog">
+
+    </header>
+    <p>Hi , im collins</p>
+    {{ title }}
+</section>
+<section id="latests-post">
+    <h2>My Latests thoughts</h2>
+    <ul>
+     {% comment %} {% for item in book %}
+            <a href="{% url "book-detail" item.id %}">{{ item.title }}</a><br>
+       {% endfor %}  {% endcomment %}
+        {{ book.title }}
+    </ul>
+
+</section>
+
+
+<section id="about">
+    <h2>What i do</h2>
+    <p>I love programming,, and i love exploring new technologies iin general</p>
+    <p>It is difficult to know what needs fixing in this code without more context. However, here are a few things that could be improved:
+        The  tag should be placed at the top of the template, before any HTML, to ensure that the static files are properly loaded.       
+        The element should be used to mark up the main content or site title, it is not recommended to use it to create a specific section of the website.
+       element, it should be filled with content.
+        
+        Here is an updated version of the code:
+        
+        </p>
+
+</section>
+{% endblock %}
