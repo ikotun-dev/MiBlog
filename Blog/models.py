@@ -38,6 +38,7 @@ class Post(models.Model):
     slug = models.SlugField(unique=True, db_index=True)
     Tags = models.ManyToManyField(Tag)
     date = models.DateField(auto_now=True)
+    image = models.CharField(max_length=100, null=True)
 
 
     def __str__(self):

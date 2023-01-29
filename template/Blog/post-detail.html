@@ -1,0 +1,40 @@
+{% extends "./base.html"%}
+{% load static %}
+
+
+{% block title %}
+    All Myposts
+{% endblock %}
+
+{% block css_files %}
+
+    <link rel="stylesheet" href="{% static "all-posts.css" %}">
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<section id="summary">
+    <h2>{{post.title}}</h2>
+    <article>
+        <img src="{% static "images/"|add:post.image %}" alt="post title">
+        <address>By {{post.author}}</address>
+        <div>
+            Last updated :  {{post.date}}<br>
+            {{post.tag}}
+        
+        </div>
+
+    </article>
+</section>
+<main>
+    <p>{{post.content}}</p>
+</main>
+
+
+
+{% endblock %}
+

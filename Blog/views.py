@@ -12,3 +12,15 @@ def posts(request):
    return render(request, "Blog/all-posts.html", {
       "posts" : latest_posts
     })
+
+
+
+
+def post_detail(request, slug):
+   post = Post.objects.get(slug=slug)
+
+
+   return render(request, "Blog/post-detail.html", {
+      "post" : post
+   })
+   

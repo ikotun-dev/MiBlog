@@ -1,9 +1,11 @@
 
 {% load static %}
+
+<link rel="stylesheet" href="{% static "post.css" %}">
 <li>
     <article class="post">
-
-            <img src="{% static "images/robo.png" %}" alt="mountain">
+        <a href="{% url 'post-detail' post.slug %}">
+            <img src="{% static "images/"|add:post.image %}" alt="mountain">
             <div class="post_content">
                 <h3>{{ post.title }}</h3><br>
                 <h4>{{ post.date }}</h4>
