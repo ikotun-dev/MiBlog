@@ -18,6 +18,7 @@ class Tag(models.Model):
 '''Model for Author that writes a pot '''
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
 
     ''' better readable format'''
     def __str__(self):
